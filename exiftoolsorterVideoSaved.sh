@@ -7,7 +7,7 @@
 
 set -e
 
-EXIFTOOL="/usr/bin/exiftool"
+EXIFTOOL=$(which exiftool)
 
 # Copy mp4's based on CreateDate into organized folder
 $EXIFTOOL -o ~/dummy/ "-Directory<CreateDate" -m -d "/data/Photos/%Y/%Y-%m-%d" -r /data/Misc/syncthing/phonecamera/ -ext mp4
