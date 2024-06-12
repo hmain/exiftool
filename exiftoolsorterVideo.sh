@@ -7,7 +7,7 @@
 
 set -e
 
-EXIFTOOL="/usr/bin/exiftool"
+EXIFTOOL=$(which exiftool)
 
 
 # Copy mp4's based on CreateDate into organized folder
