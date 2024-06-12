@@ -11,7 +11,7 @@
 
 set -e
 
-EXIFTOOL="/usr/bin/exiftool"
+EXIFTOOL=$(which exiftool)
 
 # Copy jpegs to directory recursively into organized folder
 $EXIFTOOL -o ~/dummy/ "-Directory<DateTimeOriginal" -m -d "/data/Photos/%Y/%Y-%m-%d" -r /data/Misc/syncthing/phonecamera/ -ext jpg
